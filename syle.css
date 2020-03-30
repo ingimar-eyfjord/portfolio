@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: auto;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(8, 12.5vw);
+  grid-template-rows: repeat(8, 12.5vh);
+}
+.line {
+  position: absolute;
+  width: 60vw;
+  top: 10vh;
+  left: 10vw;
+}
+.about {
+  grid-row: 3;
+  grid-column: 1;
+  width: 30vw;
+  margin-left: 10vw;
+}
+svg > line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: lineIn 2s forwards;
+}
+@keyframes lineIn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
