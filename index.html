@@ -7,69 +7,169 @@
     <link rel="stylesheet" href="syle.css" />
   </head>
   <body>
-    <img
-      class="about"
-      src="avgAssets/about_2.png"
-      alt="About site header"
-      srcset=""
-    />
-    <div class="line">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1069 1692">
-        <defs>
-          <style>
-            .cls-1,
-            .cls-2 {
-              fill: #fff;
-              stroke: #fff;
-              stroke-miterlimit: 10;
-            }
-            .cls-1 {
-              stroke-width: 5px;
-            }
-            .cls-2 {
-              stroke-width: 6px;
-            }
-          </style>
-        </defs>
-        <g id="Layer_2" data-name="Layer 2">
-          <g id="Layer_1-2" data-name="Layer 1">
-            <g id="LineAbout">
-              <line stroke="white" class="cls-1" x1="595" x2="595" y2="1692" />
-              <line
-                stroke="white"
-                class="cls-1"
-                x1="595"
-                y1="162.5"
-                x2="1069"
-                y2="162.5"
-              />
-              <line
-                stroke="white"
-                class="cls-2"
-                x1="594.74"
-                y1="551.79"
-                y2="551.79"
-              />
-              <line
-                stroke="white"
-                class="cls-1"
-                x1="595.49"
-                y1="1282.56"
-                y2="1282.56"
-              />
-              <line
-                stroke="white"
-                class="cls-1"
-                x1="594.74"
-                y1="718.5"
-                x2="1069"
-                y2="718.5"
-              />
-            </g>
-          </g>
-        </g>
-      </svg>
-      <script src="javascript.js"></script>
-    </div>
+    <section class="homepage">
+      <div class="arrow arrowbig"></div>
+      <div data-spin="spinme" class="teamPlayer"></div>
+      <div data-spin="spinme" class="Artist"></div>
+      <div data-spin="spinme" class="Coding"></div>
+      <div data-spin="spinme" class="anEye"></div>
+      <div class="line"></div>
+      <nav class="navigation">
+        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
+        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
+        <h2 data-nav="Contact" data-navState="" class="navanimation2">
+          Contact
+        </h2>
+        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
+          Portfolio
+        </h2>
+      </nav>
+    </section>
+
+    <section data-page="CV" class="cv">
+      <nav class="navigation">
+        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
+        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
+        <h2 data-nav="Contact" data-navState="" class="navanimation2">
+          Contact
+        </h2>
+        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
+          Portfolio
+        </h2>
+      </nav>
+    </section>
+
+    <section data-page="About" class="aboutP">
+      <h2 class="aboutTitle">About Me</h2>
+      <img data-img="profile" src="jpgassets/me.jpg" alt="" srcset="" />
+      <nav class="navigation">
+        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
+        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
+        <h2 data-nav="Contact" data-navState="" class="navanimation2">
+          Contact
+        </h2>
+        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
+          Portfolio
+        </h2>
+      </nav>
+    </section>
+
+    <section data-page="Contact" class="contentC">
+      <nav class="navigation">
+        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
+        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
+        <h2 data-nav="Contact" data-navState="" class="navanimation2">
+          Contact
+        </h2>
+        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
+          Portfolio
+        </h2>
+      </nav>
+    </section>
+    <section data-page="Portfolio" class="PortfolioC">
+      <nav class="navigation">
+        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
+        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
+        <h2 data-nav="Contact" data-navState="" class="navanimation2">
+          Contact
+        </h2>
+        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
+          Portfolio
+        </h2>
+      </nav>
+    </section>
+
+    <svg id="cvClipPath1">
+      <defs>
+        <clipPath id="CVclip1">
+          <circle
+            data-clip="CV"
+            data-class="one"
+            class="one"
+            cx="700"
+            cy="400"
+            r="1vh"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg id="cvClipPath2">
+      <defs>
+        <clipPath id="CVclip2">
+          <circle
+            data-clip="About"
+            data-class="two"
+            class="two"
+            cx="700"
+            cy="400"
+            r="1vh"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg id="cvClipPath3">
+      <defs>
+        <clipPath id="CVclip3">
+          <circle
+            data-clip="Contact"
+            data-class="three"
+            class="three"
+            cx="700"
+            cy="400"
+            r="1vh"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg id="cvClipPath4">
+      <defs>
+        <clipPath id="CVclip4">
+          <circle
+            data-clip="Portfolio"
+            data-class="three"
+            class="four"
+            cx="700"
+            cy="400"
+            r="1vh"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div class="profile"></div>
+    <script src="javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script>
+      function activateCircle(clip, thisisOpen, arrow) {
+        const page = document.querySelectorAll(`[data-page]`);
+        page.forEach(e => {
+          e.style.zIndex = 400;
+        });
+
+        document.querySelector(
+          `[data-page=` + thisisOpen.dataset.nav + `]`
+        ).style.zIndex = 500;
+
+        document
+          .querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`)
+          .appendChild(document.querySelector(".arrow"));
+
+        console.log(
+          document.querySelector(`[data-class=` + clip.dataset.class + `]`)
+        );
+
+        const allotherClips = document.querySelectorAll(
+          `clipPath > circle:not([data-class=` + clip.dataset.class + `])`
+        );
+        clip.style.display = "block";
+        gsap.to(clip, { duration: 1, r: 2000 });
+        setTimeout(() => {
+          allotherClips.forEach(e => {
+            e.style.display = "none";
+            gsap.to(e, { duration: 0.1, r: 0 });
+          });
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
