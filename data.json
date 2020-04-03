@@ -1,0 +1,142 @@
+[
+    {
+        "id": "Animation",
+        "name": "Sequenced Animation",
+        "parts": [
+            {
+                "header": "A project with an emphasis on interactive animation.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "animation.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "Parcel Bundler",
+                    "GSAP3 Library"
+                ],
+                "link": "http://iesdesigner.eu/school-folder/3-semester/advanced-animation/index.html",
+                "body": ""
+            }
+        ]
+    },
+    {
+        "id": "Hacked",
+        "name": "Hogwarts Hacked",
+        "parts": [
+            {
+                "header": "A project about data handling.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "hacked.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3"
+                ],
+                "link": "",
+                "body": ""
+            }
+        ]
+    },
+    {
+        "id": "Klemman",
+        "name": "Esben Klemman",
+        "parts": [
+            {
+                "header": "A portfolio & store type website.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "esben.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "WordPress API"
+                ],
+                "link": "",
+                "body": ""
+            }
+        ]
+    },
+    {
+        "id": "Dialogue",
+        "name": "Dialogue One",
+        "parts": [
+            {
+                "header": "A project planning and time register for consultants.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "D1.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "PHP",
+                    "MySQL",
+                    "Libraries"
+                ],
+                "link": "",
+                "body": ""
+            }
+        ]
+    },
+    {
+        "id": "Huset",
+        "name": "KBH Huset",
+        "parts": [
+            {
+                "header": "A cinema ticket site - redesign concept.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "huset.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "WordPress API"
+                ],
+                "link": "",
+                "body": ""
+            }
+        ]
+    },
+    {
+        "id": "Nimbler",
+        "name": "Nimbler",
+        "parts": [
+            {
+                "header": "A sustainable business advertisement concept.",
+                "media": [
+                    {
+                        "jpg": "",
+                        "gif": "Nimbler.gif"
+                    }
+                ],
+                "under": [
+                    "JavaScript",
+                    "HTML5",
+                    "CSS3",
+                    "Google maps API"
+                ],
+                "link": "http://iesdesigner.eu/school-folder/2-semester/sustainable-advertisement-agency/unnamedwebsite/shopping.html",
+                "body": ""
+            }
+        ]
+    }
+]

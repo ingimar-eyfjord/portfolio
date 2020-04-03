@@ -1,175 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="syle.css" />
-  </head>
-  <body>
-    <section class="homepage">
-      <div class="arrow arrowbig"></div>
-      <div data-spin="spinme" class="teamPlayer"></div>
-      <div data-spin="spinme" class="Artist"></div>
-      <div data-spin="spinme" class="Coding"></div>
-      <div data-spin="spinme" class="anEye"></div>
-      <div class="line"></div>
-      <nav class="navigation">
-        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
-        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
-        <h2 data-nav="Contact" data-navState="" class="navanimation2">
-          Contact
-        </h2>
-        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
-          Portfolio
-        </h2>
-      </nav>
-    </section>
 
-    <section data-page="CV" class="cv">
-      <nav class="navigation">
-        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
-        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
-        <h2 data-nav="Contact" data-navState="" class="navanimation2">
-          Contact
-        </h2>
-        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
-          Portfolio
-        </h2>
-      </nav>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="syle.css" />
+</head>
 
-    <section data-page="About" class="aboutP">
-      <h2 class="aboutTitle">About Me</h2>
-      <img data-img="profile" src="jpgassets/me.jpg" alt="" srcset="" />
-      <nav class="navigation">
-        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
-        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
-        <h2 data-nav="Contact" data-navState="" class="navanimation2">
-          Contact
-        </h2>
-        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
-          Portfolio
-        </h2>
-      </nav>
-    </section>
+<body>
+  <section data-page="Home" class="homepage">
+    <h2 data-title="Home" class="title">Home</h2>
+    <div data-color="" class="arrow arrowbig"></div>
+    <div data-spin="spinme" class="teamPlayer"></div>
+    <div data-spin="spinme" class="Artist"></div>
+    <div data-spin="spinme" class="Coding"></div>
+    <div data-spin="spinme" class="anEye"></div>
+    <div class="line"></div>
+    <nav class="navigation">
+      <h2 data-nav="Home" data-nav-state="active" class="navanimation">Home</h2>
+      <h2 data-nav="CV" data-nav-state="" class="navanimation">CV</h2>
+      <h2 data-nav="About" data-nav-state="" class="navanimation1">About</h2>
+      <h2 data-nav="Contact" data-nav-state="" class="navanimation2">Contact</h2>
+      <h2 data-nav="Portfolio" data-nav-state="" class="navanimation3">Portfolio</h2>
+    </nav>
+  </section>
 
-    <section data-page="Contact" class="contentC">
-      <nav class="navigation">
-        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
-        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
-        <h2 data-nav="Contact" data-navState="" class="navanimation2">
-          Contact
-        </h2>
-        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
-          Portfolio
-        </h2>
-      </nav>
-    </section>
-    <section data-page="Portfolio" class="PortfolioC">
-      <nav class="navigation">
-        <h2 data-nav="CV" data-navState="" class="navanimation">CV</h2>
-        <h2 data-nav="About" data-navState="" class="navanimation1">About</h2>
-        <h2 data-nav="Contact" data-navState="" class="navanimation2">
-          Contact
-        </h2>
-        <h2 data-nav="Portfolio" data-navState="" class="navanimation3">
-          Portfolio
-        </h2>
-      </nav>
-    </section>
+  <section data-page="CV" class="cv">
+    <h2 data-title="CV" class="title">CV</h2>
+  </section>
 
-    <svg id="cvClipPath1">
-      <defs>
-        <clipPath id="CVclip1">
-          <circle
-            data-clip="CV"
-            data-class="one"
-            class="one"
-            cx="700"
-            cy="400"
-            r="1vh"
-          />
-        </clipPath>
-      </defs>
-    </svg>
-    <svg id="cvClipPath2">
-      <defs>
-        <clipPath id="CVclip2">
-          <circle
-            data-clip="About"
-            data-class="two"
-            class="two"
-            cx="700"
-            cy="400"
-            r="1vh"
-          />
-        </clipPath>
-      </defs>
-    </svg>
-    <svg id="cvClipPath3">
-      <defs>
-        <clipPath id="CVclip3">
-          <circle
-            data-clip="Contact"
-            data-class="three"
-            class="three"
-            cx="700"
-            cy="400"
-            r="1vh"
-          />
-        </clipPath>
-      </defs>
-    </svg>
-    <svg id="cvClipPath4">
-      <defs>
-        <clipPath id="CVclip4">
-          <circle
-            data-clip="Portfolio"
-            data-class="three"
-            class="four"
-            cx="700"
-            cy="400"
-            r="1vh"
-          />
-        </clipPath>
-      </defs>
-    </svg>
+  <section data-page="About" class="aboutP">
+    <h2 data-title="About" class="title">About</h2>
+    <p class="goal">My current goal is to become a full stack Web-Developer, currently I'm working with JavaScript,
+      HTML, CSS, PHP and MysQl.
+    </p>
+    <div data-img="profile"></div>
+  </section>
 
-    <div class="profile"></div>
-    <script src="javascript.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script>
-      function activateCircle(clip, thisisOpen, arrow) {
-        const page = document.querySelectorAll(`[data-page]`);
-        page.forEach(e => {
-          e.style.zIndex = 400;
+  <section data-page="Contact" class="contentC">
+    <h2 data-title="Contact" class="title">Contact</h2>
+  </section>
+  <section data-page="Portfolio" class="PortfolioC">
+    <h2 data-title="Portfolio" class="title">Portfolio</h2>
+
+
+    <div class="PortfolioCard">
+    </div>
+    <article class="portfolioArticle">
+      <section class="headersFPort">
+        <h2 data-porthover="Animation" class="PortfolioTitle">Sequenced Animation</h2>
+        <h2 data-porthover="Hacked" class="PortfolioTitle">Hogwarts Hacked</h2>
+        <h2 data-porthover="Klemman" class="PortfolioTitle">Esben Klemman</h2>
+        <h2 data-porthover="Dialogue" class="PortfolioTitle">Dialogue One</h2>
+        <h2 data-porthover="Huset" class="PortfolioTitle">KBH Huset</h2>
+        <h2 data-porthover="Nimbler" class="PortfolioTitle">Nimbler</h2>
+      </section>
+      <img src="SVGtext/scroll.svg" class="scroll" alt="Scroll">
+  </section>
+
+  <svg id="cvClipPath1">
+    <defs>
+      <clipPath id="CVclip1">
+        <circle data-clip="CV" data-class="one" class="one" cx="700" cy="400" r="1vh" />
+      </clipPath>
+    </defs>
+  </svg>
+  <svg id="cvClipPath2">
+    <defs>
+      <clipPath id="CVclip2">
+        <circle data-clip="About" data-class="two" class="two" cx="700" cy="400" r="1vh" />
+      </clipPath>
+    </defs>
+  </svg>
+  <svg id="cvClipPath3">
+    <defs>
+      <clipPath id="CVclip3">
+        <circle data-clip="Contact" data-class="three" class="three" cx="700" cy="400" r="1vh" />
+      </clipPath>
+    </defs>
+  </svg>
+  <svg id="cvClipPath4">
+    <defs>
+      <clipPath id="CVclip4">
+        <circle data-clip="Portfolio" data-class="four" class="four" cx="700" cy="400" r="1vh" />
+      </clipPath>
+    </defs>
+  </svg>
+  <svg id="cvClipPath5">
+    <defs>
+      <clipPath id="CVclip5">
+        <circle data-clip="Home" data-class="five" class="five" cx="700" cy="400" r="2000" />
+      </clipPath>
+    </defs>
+  </svg>
+  <svg id="cvClipPath6">
+    <defs>
+      <clipPath id="CVclip6">
+        <circle data-clip="portcard" data-class="six" class="six" cx="700" cy="400" r="0" />
+      </clipPath>
+    </defs>
+  </svg>
+
+
+  <div class="profile"></div>
+
+  <template class="portcardTemplate">
+
+    <div data-header="Animation" class="header"></div>
+    <div class="PortfolioCard-text">
+      <p class="portParagr">A project with an emphasis on interactive animation.</p>
+      <ul>
+      </ul>
+    </div>
+
+  </template>
+  <script src="javascript.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <script>
+
+    function activateCircle2(clip) {
+      clip.style.display = "block";
+      gsap.to(clip, { duration: 1, r: 1000 });
+    }
+    function hidePortCard() {
+      const circle = document.querySelector(`[data-clip="portcard"]`);
+      gsap.to(circle, { duration: 1, r: 0 });
+    }
+
+    function activateCircle(clip, thisisOpen, arrow) {
+      const page = document.querySelectorAll(`[data-page]`);
+      page.forEach(e => {
+        e.style.zIndex = 400;
+      });
+
+      document.querySelector(
+        `[data-page=` + thisisOpen.dataset.nav + `]`
+      ).style.zIndex = 500;
+
+      document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector(".arrow"));
+      document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector("nav"));
+      document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector(".line"));
+      const allotherClips = document.querySelectorAll(`clipPath > circle:not([data-class=` + clip.dataset.class + `])`);
+      document.querySelector(`[data-title=` + thisisOpen.dataset.nav + `]`).style.display = "block"
+      clip.style.display = "block";
+      gsap.to(clip, { duration: 1, r: 2000 });
+      setTimeout(() => {
+        allotherClips.forEach(e => {
+          e.style.display = "none";
+          gsap.to(e, { duration: 0.1, r: 0 });
         });
+      }, 1000);
+    }
+  </script>
+</body>
 
-        document.querySelector(
-          `[data-page=` + thisisOpen.dataset.nav + `]`
-        ).style.zIndex = 500;
-
-        document
-          .querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`)
-          .appendChild(document.querySelector(".arrow"));
-
-        console.log(
-          document.querySelector(`[data-class=` + clip.dataset.class + `]`)
-        );
-
-        const allotherClips = document.querySelectorAll(
-          `clipPath > circle:not([data-class=` + clip.dataset.class + `])`
-        );
-        clip.style.display = "block";
-        gsap.to(clip, { duration: 1, r: 2000 });
-        setTimeout(() => {
-          allotherClips.forEach(e => {
-            e.style.display = "none";
-            gsap.to(e, { duration: 0.1, r: 0 });
-          });
-        }, 1000);
-      }
-    </script>
-  </body>
 </html>
