@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <meta name="description"
+    content="Multimedia designer and aspiring Web-Developer with a passion for coding. With experience in front end design and some back-end, I make websites.">
+  <title>Ingimar Eyfjord Smarason - Copenhagen based multimedia design student.</title>
+  <link rel="shortcut icon" href="icons/favicon-32x32.png" type="image/png">
   <link rel="stylesheet" href="syle.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,45 +22,116 @@
     <div data-spin="spinme" class="anEye"></div>
     <div class="line"></div>
     <nav class="navigation">
-      <h2 data-nav="Home" data-nav-state="active" class="navanimation">Home</h2>
-      <h2 data-nav="CV" data-nav-state="" class="navanimation">CV</h2>
-      <h2 data-nav="About" data-nav-state="" class="navanimation1">About</h2>
-      <h2 data-nav="Contact" data-nav-state="" class="navanimation2">Contact</h2>
-      <h2 data-nav="Portfolio" data-nav-state="" class="navanimation3">Portfolio</h2>
+      <p data-nav="Home" data-nav-state="active" class="navanimation">Home</p>
+      <p data-nav="CV" data-nav-state="" class="navanimation">CV</p>
+      <p data-nav="About" data-nav-state="" class="navanimation1">About</p>
+      <p data-nav="Contact" data-nav-state="" class="navanimation2">Contact</p>
+      <p data-nav="Portfolio" data-nav-state="" class="navanimation3">Portfolio</p>
     </nav>
   </section>
 
   <section data-page="CV" class="cv">
     <h2 data-title="CV" class="title">CV</h2>
+    <div class="goal">Under Construction</div>
   </section>
 
   <section data-page="About" class="aboutP">
     <h2 data-title="About" class="title">About</h2>
-    <p class="goal">My current goal is to become a full stack Web-Developer, currently I'm working with JavaScript,
-      HTML, CSS, PHP and MysQl.
-    </p>
-    <div data-img="profile"></div>
+    <div class="aboutbontainer">
+
+      <div class="goal">Under Construction</div>
+      <!--    <h1>Hello I'm <br> Ingimar Eyfjörð Smárason</h1>
+        <h3>But most people call me Ingi</h3>
+        <p>I'm an Icelandic expat based in Copenhagen, Denmark.</p>
+        <p>I am a student of multimedia design and comunication at <a
+            href="https://kea.dk/en/programmes/academy-profession-degree/multimedia-design">KEA</a></p>
+        <p>My current goal is to become a full stack Web-Developer, as I fell in love with coding when I started my
+          education. The current stack that I'm working with is JavaScript,
+          HTML, CSS, PHP and MysQl.
+        </p>
+        <p>Currently, I'm working at Dialogue One as a freelance Web-Developer and consultant planner. I'm there using
+          all my accumulated skillsets that I've acquired during my studies in Multimedia Design but also learning PHP
+          and MySQL on the go. This way I have made a full-stack solution for a time- registry and planning web-solution
+          for the employees working at Dialogue One</p>
+        <p>I am now in search of an internship for the start of 4th quarter of 2020. I am be looking for a
+          multimedia-design Internship with a focus on web-solutions.<br> - contact me <p data-nav="Contact">here</p> if
+          you're interested</p>
+      </div>
+      <div data-img="profile"></div>-->
+
+    </div>
   </section>
 
   <section data-page="Contact" class="contentC">
     <h2 data-title="Contact" class="title">Contact</h2>
+    <h2 class="contactMessage">Want to grab a ☕? Send a ✉️</h2>
+    <h2 class="thanks"> Thanks you for sending me a ✉️<br> I will respond as soon as possible.</h2>
+    <div class="contactForm">
+      <form method="POST" id="ContactForm" action="contact.php">
+        <div class="ES">
+          <input data-mini="yes" name="email" type="email" placeholder="Your Email">
+          <input data-mini="yes" name="subject" type="text" placeholder="Subject">
+        </div>
+        <div class="ES">
+          <input data-mini="yes" name="name" type="text" placeholder="Your name (optional)">
+          <input data-mini="yes" name="phneNr" type="text" placeholder="Phone Number (optional)">
+        </div>
+        <textarea class="body" data-mini="yes" name="body" cols="30" rows="10" placeholder="Body"></textarea>
+        <div class="conBtns">
+          <input type="hidden" name="submit" value="yes">
+          <button data-mini="yes" class="submit" type="submit">Send Message</button>
+          <button data-mini="yes" class="reset" type="reset">CLEAR</button>
+        </div>
+      </form>
+      <div class="contactIcons">
+        <a href="https://www.facebook.com/ingimareys" target="_blank"><img data-mini="yes" src="SoMEicons/facebook.svg"
+            alt="facebook"></a>
+        <a href="https://www.instagram.com/ingimar_eyfjord/" target="_blank"><img data-mini="yes"
+            src="SoMEicons/insta.svg" alt="insta"></a>
+        <a href="https://twitter.com/ISmarason" target="_blank"><img data-mini="yes" src="SoMEicons/twitter.svg"
+            alt="twitter"></a>
+        <a href="https://github.com/ingimar-eyfjord" target="_blank"><img data-mini="yes" src="SoMEicons/git.svg"
+            alt="git"></a>
+        <a href="."><img data-mini="yes" src="SoMEicons/phone.svg" alt="phone"></a>
+      </div>
+    </div>
   </section>
   <section data-page="Portfolio" class="PortfolioC">
+    <img src="SVGtext/scroll.svg" class="scroll" alt="Scroll">
     <h2 data-title="Portfolio" class="title">Portfolio</h2>
 
 
     <div class="PortfolioCard">
     </div>
     <article class="portfolioArticle">
+      <h2 class="PortfolioTitle1">Examples of my work:</h2>
       <section class="headersFPort">
-        <h2 data-porthover="Animation" class="PortfolioTitle">Sequenced Animation</h2>
-        <h2 data-porthover="Hacked" class="PortfolioTitle">Hogwarts Hacked</h2>
-        <h2 data-porthover="Klemman" class="PortfolioTitle">Esben Klemman</h2>
-        <h2 data-porthover="Dialogue" class="PortfolioTitle">Dialogue One</h2>
-        <h2 data-porthover="Huset" class="PortfolioTitle">KBH Huset</h2>
-        <h2 data-porthover="Nimbler" class="PortfolioTitle">Nimbler</h2>
+        <h2 data-porthover="Animation" class="PortfolioTitle"> <a
+            href="http://ingimar.dk/portfolio-%3E/advanced-animation/index.html" target="_blank">Sequenced Animation</a>
+        </h2>
+        <p>The sequenced animation project was a school project. <br> Our client for this project is the <a
+            href="https://tekniskmuseum.dk/english/about/">museum science and technology.</a><br> In this project, I was
+          working in a group, where we used git version control<br> and GitHub to work together.</p>
+        <h2 data-porthover="Hacked" class="PortfolioTitle"><a
+            href="http://ingimar.dk/portfolio-%3E/hogwarts_hacked/index.html" target="_blank">Hogwarts Hacked</a></h2>
+        <p>The hogwarts Hacked project was a school project. <br> This project was concept based; to increase our
+          skillsets in data handling.<br>
+          <h2 data-porthover="Klemman" class="PortfolioTitle"> <a
+              href="http://ingimar.dk/portfolio-%3E/esben/index.html" target="_blank">Esben Klemmann</a></h2>
+          <p>This was the final project of my second semester.<br> Our client is a Danish Artist that goes by the
+            Name Esben
+            Klemann. <br> Our goal for this project was to analise Esbens online and SoMe pressence, <br> along with
+            finding
+            and
+            proposing solutions to any problem areas in our clients business.</p>
+          <h2 data-porthover="Dialogue" class="PortfolioTitle"> <a href="http://dialogueone.com/"
+              target="_blank">Dialogue
+              One</a></h2>
+          <h2 data-porthover="Huset" class="PortfolioTitle"> <a href="">KBH Huset</a></h2>
+          <h2 data-porthover="Nimbler" class="PortfolioTitle"> <a
+              href="http://ingimar.dk/portfolio-%3E/nimbler/unnamedfornow.html" target="_blank">Nimbler</a></h2>
       </section>
-      <img src="SVGtext/scroll.svg" class="scroll" alt="Scroll">
+    </article>
   </section>
 
   <svg id="cvClipPath1">
@@ -101,6 +176,13 @@
       </clipPath>
     </defs>
   </svg>
+  <svg id="cvClipPath7">
+    <defs>
+      <clipPath id="CVclip7">
+        <circle data-clip="form" data-class="seven" class="thisseven" cx="700" cy="400" r="0" />
+      </clipPath>
+    </defs>
+  </svg>
 
 
   <div class="profile"></div>
@@ -141,6 +223,7 @@
       document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector(".arrow"));
       document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector("nav"));
       document.querySelector(`[data-page=` + thisisOpen.dataset.nav + `]`).appendChild(document.querySelector(".line"));
+
       const allotherClips = document.querySelectorAll(`clipPath > circle:not([data-class=` + clip.dataset.class + `])`);
       document.querySelector(`[data-title=` + thisisOpen.dataset.nav + `]`).style.display = "block"
       clip.style.display = "block";
@@ -153,6 +236,8 @@
       }, 1000);
     }
   </script>
+
+
 </body>
 
 </html>

@@ -2,17 +2,6 @@ window.addEventListener("DOMContentLoaded", listen);
 /// This is the cursor function.
 document.addEventListener("mousemove", function (event) {
   // ////////// Spinner
-  //   const spinner = document.querySelectorAll(`[data-spin]`);
-  //   spinner.forEach(e => {
-  //     e.addEventListener("mouseover", spin);
-  //   });
-  //   function spin() {
-  //     arrow.classList.add("spinme");
-  //   }
-  //   document.querySelector("body").addEventListener("mouseover", e => {
-  //     arrow.classList.remove("spinme");
-  //   });
-
   const x = event.pageX;
   const y = event.pageY;
   const midX = x - window.innerWidth / 2;
@@ -23,57 +12,6 @@ document.addEventListener("mousemove", function (event) {
   //// Spin the mouse when you move it.
   arrow.style.transform =
     "rotateX(" + midY * 0.2 + "deg) rotateY(" + midX * 0.2 + "deg)";
-  const cvNav = document.querySelector(`[data-nav="CV"]`);
-  const abNav = document.querySelector(`[data-nav="About"]`);
-  const contNav = document.querySelector(`[data-nav="Contact"]`);
-  const portNav = document.querySelector(`[data-nav="Portfolio"]`);
-
-
-  const cv = cvNav.getClientRects();
-  const ab = abNav.getClientRects();
-  const cont = contNav.getClientRects();
-  const port = portNav.getClientRects();
-  ///// Check the pos
-  const cvX = cv[0].x;
-  const cvY = cv[0].y;
-  const abX = ab[0].x;
-  const abY = ab[0].y;
-  const contX = cont[0].x;
-  const contY = cont[0].y;
-  const portX = port[0].x;
-  const portY = port[0].y;
-  /// if cursor goes over the navigation elements. then make small and stop spinning.
-
-
-  // if (x >= cvX && y >= cvY) {
-  //   const cv = document.querySelector(`[data-nav="CV"]`);
-  //   arrow.style.backgroundColor = "#ff414d";
-  // }
-  // if (x >= abX && y >= abY) {
-  //   arrow.style.backgroundColor = "#1aa6b7";
-  // }
-  // if (x >= contX && y >= contY) {
-  //   arrow.style.backgroundColor = "#002d40";
-  // }
-  // if (x >= portX && y >= portY) {
-  //   arrow.style.backgroundColor = "#d9ecf2";
-  // }
-
-  if (
-    (x >= cvX && y >= cvY) ||
-    (x >= abX && y >= abY) ||
-    (x >= contX && y >= contY) ||
-    (x >= portX && y >= portY)
-  ) {
-    arrow.style.opacity = 0.8;
-    arrow.classList.remove("arrowbig");
-    arrow.classList.add("arrowsmall");
-    arrow.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  } else {
-    arrow.classList.add("arrowbig");
-    arrow.classList.remove("arrowsmall");
-    arrow.style.opacity = 1;
-  }
 });
 //// Navigation function.
 function navigation() {
@@ -97,10 +35,18 @@ function navigation() {
   clip.setAttribute("cy", Y);
   clip.setAttribute("cx", X);
   activateCircle(clip, thisisOpen, arrow);
+
+
+  const part = document.querySelector(".PortfolioC")
+  if (part.querySelector(`[data-nav="Home"]`)) {
+    const changeCol = function () {
+      document.querySelector(`[data-nav="Home"]`).style.color = "#f46a79";
+    }
+    document.querySelector(`[data-nav="Home"]`).addEventListener("mouseleave", e = changeCol);
+  }
 }
 
 async function showPortCard() {
-  // this.style.pointerEvent = "none"
   const template = document.querySelector(".portcardTemplate").content;
   const clone = template.cloneNode(true);
   const what = this.dataset.porthover;
@@ -132,6 +78,29 @@ async function GetJsonData(part) {
   })
   return ret;
 }
+
+const smallArrow = function () {
+  const part = document.querySelector(".PortfolioC")
+  if (part.querySelector(`[data-nav="Home"]`)) {
+    const changeCol = function () {
+      document.querySelector(`[data-nav="Home"]`).style.color = "#002D40";
+    }
+    document.querySelector(`[data-nav="Home"]`).addEventListener("mouseover", e = changeCol);
+  }
+  const arrow = document.querySelector(".arrow")
+  arrow.style.opacity = 0.8;
+  arrow.classList.remove("arrowbig");
+  arrow.classList.add("arrowsmall");
+  arrow.style.transform = `rotateX(0deg) rotateY(0deg)`;
+}
+
+const bigArrow = function () {
+  const arrow = document.querySelector(".arrow")
+  arrow.classList.add("arrowbig");
+  arrow.classList.remove("arrowsmall");
+  arrow.style.opacity = 1;
+}
+
 /// Add event listeners on document loaded.
 function listen() {
   const e = document.querySelectorAll("[data-nav]");
@@ -147,5 +116,44 @@ function listen() {
     e.addEventListener("mouseleave", (event = hidePortCard));
   });
 
-
+  const nav = document.querySelectorAll("[data-nav]")
+  nav.forEach(e => {
+    e.addEventListener("mouseover", (event = smallArrow));
+    e.addEventListener("mouseleave", (event = bigArrow));
+  });
+  const a = document.querySelectorAll("a")
+  a.forEach(e => {
+    e.addEventListener("mouseover", (event = smallArrow));
+    e.addEventListener("mouseleave", (event = bigArrow));
+  });
+  const g = document.querySelectorAll(".PortfolioTitle");
+  g.forEach(e => {
+    e.addEventListener("mouseover", (event = smallArrow));
+    e.addEventListener("mouseleave", (event = bigArrow));
+  });
+  const k = document.querySelectorAll("[data-mini]");
+  k.forEach(e => {
+    e.addEventListener("mouseover", (event = smallArrow));
+    e.addEventListener("mouseleave", (event = bigArrow));
+  });
 }
+
+
+$("#ContactForm").submit(function (e) {
+  e.preventDefault(); // avoid to execute the actual submit of the form.
+  const form = $(this);
+  const url = form.attr("action");
+  const data = form.serialize();
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: form.serialize(), // serializes the form's elements.
+    success: function (data) {
+      document.querySelector(".thanks").style.display = "block";
+      const clip = document.querySelector("#CVclip7");
+      clip.style.display = "block";
+      const circle = clip.querySelector("circle")
+      gsap.to(circle, { duration: 2, r: 1000 });
+    }
+  });
+});
